@@ -18,8 +18,8 @@ header{
     display: flex;
     align-items: center;
     gap: 5rem;
-    background: rgb(0,0,0);
-    backdrop-filter: blur(8px);
+    background: rgb(0,0,0,0.8);
+    backdrop-filter: blur(5px);
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 3rem;
@@ -254,4 +254,58 @@ section{
 
 ::-webkit-scrollbar-thumb{
     background: linear-gradient(to bottom,rgb(0,157,255), rgb(255,0,255))
+}
+
+/* Project Portion Styling */
+.projects {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    border: 2px solid black;
+    border-radius: 3rem;
+}
+
+.project-card:hover{
+    background-color: black;
+    color: white;
+    transform: translateY(-10px) scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.project-card:hover .btn{
+    border: 2px solid white;
+    color: white;
+}
+
+.project-card:hover .btn:hover{
+    border: 2px solid  white;
+    color: black;
+    background: white;
+}
+
+.project-card h3{
+    font-size: 2rem;
+    font-weight: 500;
 }
